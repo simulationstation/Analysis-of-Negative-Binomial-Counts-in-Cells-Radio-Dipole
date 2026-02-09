@@ -57,4 +57,3 @@ The scripts expect locally staged survey files (not committed here), with defaul
 - `data/external/radio_dipole/racs_low/racs_low_dr1_sources_galacticcut_v2021_08_v02_mincols.csv.gz`
 - `data/external/radio_dipole/lotss_dr2/LoTSS_DR2_v110_masked.srl.fits`
 - `data/external/radio_dipole/lotss_dr2/dr2-moc.moc`
-I present evidence that this anomaly is a systematics artifact rather than physical occurrence. 
