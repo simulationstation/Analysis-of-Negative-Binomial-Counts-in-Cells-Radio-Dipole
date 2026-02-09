@@ -1,0 +1,367 @@
+{
+  "meta": {
+    "created_utc": "2026-02-08T08:24:18.574544+00:00",
+    "seed": 20260208,
+    "paper": "arXiv:2509.16732",
+    "cmb_ra_deg": 167.94,
+    "cmb_dec_deg": -6.94,
+    "cmb_hat": [
+      -0.970764275182547,
+      0.20740506491115845,
+      -0.12082988487333042
+    ]
+  },
+  "config": {
+    "nside": 32,
+    "nest": true,
+    "nb_model": "decra_exp",
+    "extra_templates": [
+      "haslam_k408",
+      "nvss_e_s1_4",
+      "lotss_isl_rms",
+      "lotss_masked_fraction",
+      "lotss_moc_frac"
+    ],
+    "gal_b_cut_deg": 10.0,
+    "lotss_moc_mode": "full",
+    "lotss_moc_lmax": 10,
+    "lotss_dec_min": null,
+    "lotss_dec_max": null,
+    "do_mcmc": false,
+    "mcmc_executed": false,
+    "nwalkers": 48,
+    "nburn": 600,
+    "nstep": 1400,
+    "nproc": 256,
+    "tmpl_coef_bound": 0.2,
+    "tmpl_ridge": 1.0,
+    "n_starts": 64,
+    "start_seed": 20260208,
+    "injection_nsim": 0,
+    "inj_d": 0.01735,
+    "inj_ra": 167.94,
+    "inj_dec": -6.94,
+    "inj_a_dec": 0.03,
+    "inj_a_dec2": -0.015,
+    "inj_a_sinra": 0.01,
+    "inj_a_cosra": 0.01
+  },
+  "inputs": {
+    "nvss_fits": "data/external/zenodo_6784602/secrest_extracted/secrest+22_accepted/nvss/reference/NVSS.fit",
+    "racs_csv_gz": "data/external/radio_dipole/racs_low/racs_low_dr1_sources_galacticcut_v2021_08_v02_mincols.csv.gz",
+    "lotss_fits": "data/external/radio_dipole/lotss_dr2/LoTSS_DR2_v110_masked.srl.fits",
+    "lotss_moc": "data/external/radio_dipole/lotss_dr2/dr2-moc.moc",
+    "haslam_fits": "data/external/zenodo_6784602/secrest_extracted/secrest+22_accepted/reference/haslam408_dsds_Remazeilles2014_512.fits"
+  },
+  "surveys": [
+    {
+      "name": "NVSS",
+      "cut_mjy": 20.0,
+      "n_cell": 8426,
+      "n_src": 266836,
+      "mu": 31.668169950154283,
+      "var": 43.86282971524227,
+      "p": 0.27801808146569174
+    },
+    {
+      "name": "RACS-low",
+      "cut_mjy": 20.0,
+      "n_cell": 7427,
+      "n_src": 332052,
+      "mu": 44.70876531573987,
+      "var": 56.875058486326296,
+      "p": 0.21391262698237767
+    },
+    {
+      "name": "LoTSS-DR2",
+      "cut_mjy": 5.0,
+      "n_cell": 1502,
+      "n_src": 444703,
+      "mu": 296.07390146471374,
+      "var": 915.1057236600644,
+      "p": 0.6764593491115605
+    }
+  ],
+  "fits": {
+    "NVSS": {
+      "map": {
+        "model": "decra_exp",
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "n_starts": 64,
+        "d": 0.05,
+        "ra_deg": 83.24698512251616,
+        "dec_deg": -69.09264132034963,
+        "r0": 82.89712168294928,
+        "loglike": -27611.206734365922,
+        "dip_hat": [
+          0.04196280562721184,
+          0.35438219521951353,
+          -0.9341586496175537
+        ],
+        "template_names": [
+          "dec_z",
+          "dec2_z",
+          "sin_ra_z",
+          "cos_ra_z",
+          "haslam_k408_z",
+          "nvss_e_s1_4_z",
+          "lotss_isl_rms_z",
+          "lotss_masked_fraction_z",
+          "lotss_moc_frac_z"
+        ],
+        "template_coef": [
+          0.035758160803823234,
+          -0.016790934770626334,
+          -0.005409304641611578,
+          -0.011531779130417578,
+          -0.0015042576767953654,
+          0.01776287765399924,
+          -9.782920227546367e-06,
+          6.915326220283278e-05,
+          0.00017813330475796964
+        ],
+        "ic": {
+          "k_params": 13.0,
+          "n_obs": 8426.0,
+          "aic": 55248.413468731844,
+          "bic": 55339.92147548485
+        }
+      },
+      "mcmc": null
+    },
+    "RACS-low": {
+      "map": {
+        "model": "decra_exp",
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "n_starts": 64,
+        "d": 0.05,
+        "ra_deg": 221.94659030340327,
+        "dec_deg": 14.713679778174535,
+        "r0": 165.00806174221185,
+        "loglike": -25507.002760981188,
+        "dip_hat": [
+          -0.7193779603137714,
+          -0.6465175939793267,
+          0.2539888794612477
+        ],
+        "template_names": [
+          "dec_z",
+          "dec2_z",
+          "sin_ra_z",
+          "cos_ra_z",
+          "haslam_k408_z",
+          "nvss_e_s1_4_z",
+          "lotss_isl_rms_z",
+          "lotss_masked_fraction_z",
+          "lotss_moc_frac_z"
+        ],
+        "template_coef": [
+          -0.020350144112455695,
+          -0.017273963800575484,
+          0.011836627401742591,
+          0.011826308580852178,
+          -0.010679947236882127,
+          0.005960337355896937,
+          -0.010310884260787495,
+          -0.004086041050579029,
+          0.001763787434859291
+        ],
+        "ic": {
+          "k_params": 13.0,
+          "n_obs": 7427.0,
+          "aic": 51040.005521962375,
+          "bic": 51129.872926702075
+        }
+      },
+      "mcmc": null
+    },
+    "LoTSS-DR2": {
+      "map": {
+        "model": "decra_exp",
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "n_starts": 64,
+        "d": 0.05,
+        "ra_deg": 107.30415222590644,
+        "dec_deg": -0.7663522803485906,
+        "r0": 141.6958277341162,
+        "loglike": -7136.890978690222,
+        "dip_hat": [
+          -0.29741745876997594,
+          0.9546538458260225,
+          -0.01337497171565627
+        ],
+        "template_names": [
+          "dec_z",
+          "dec2_z",
+          "sin_ra_z",
+          "cos_ra_z",
+          "haslam_k408_z",
+          "nvss_e_s1_4_z",
+          "lotss_isl_rms_z",
+          "lotss_masked_fraction_z",
+          "lotss_moc_frac_z"
+        ],
+        "template_coef": [
+          -0.038393671605352224,
+          0.027431312932656132,
+          -0.008455330582946263,
+          -0.0022260842308260424,
+          -0.0006495468243457098,
+          0.0009900664801154669,
+          -0.03750816835038059,
+          -0.03869505357797134,
+          0.0016084278456391001
+        ],
+        "ic": {
+          "k_params": 13.0,
+          "n_obs": 1502.0,
+          "aic": 14299.781957380445,
+          "bic": 14368.871144200657
+        }
+      },
+      "mcmc": null
+    },
+    "RACS-low + NVSS": {
+      "map": {
+        "model": "decra_exp",
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "n_starts": 64,
+        "d": 0.04996643539656404,
+        "ra_deg": 213.5146289952838,
+        "dec_deg": -49.65299505501683,
+        "r0s": {
+          "RACS-low": 162.9865358435673,
+          "NVSS": 82.70174682030056
+        },
+        "loglike": -53125.19863788362,
+        "dip_hat": [
+          -0.5397791431582941,
+          -0.3574702505504783,
+          -0.7621374525521469
+        ],
+        "template_names": [
+          "dec_z",
+          "dec2_z",
+          "sin_ra_z",
+          "cos_ra_z",
+          "haslam_k408_z",
+          "nvss_e_s1_4_z",
+          "lotss_isl_rms_z",
+          "lotss_masked_fraction_z",
+          "lotss_moc_frac_z"
+        ],
+        "template_coef": {
+          "RACS-low": [
+            0.0033916135680565804,
+            -0.013274721482376175,
+            0.0033345450187427816,
+            0.0058588346796357585,
+            -0.010963023529844011,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "NVSS": [
+            0.03161024464764597,
+            -0.015622978830353273,
+            0.013422039131757234,
+            0.007490866584519431,
+            -0.004080260373506867,
+            0.017814414226161927,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "ic": {
+          "k_params": 23.0,
+          "n_obs": 15853.0,
+          "aic": 106296.39727576725,
+          "bic": 106472.83289859165
+        }
+      },
+      "mcmc": null
+    },
+    "LoTSS-DR2 + RACS-low + NVSS": {
+      "map": {
+        "model": "decra_exp",
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "n_starts": 64,
+        "d": 0.05,
+        "ra_deg": 188.5641240480752,
+        "dec_deg": -53.346825500553834,
+        "r0s": {
+          "LoTSS-DR2": 144.4400584547047,
+          "RACS-low": 162.9066405554841,
+          "NVSS": 82.73123776898733
+        },
+        "loglike": -60266.1370149768,
+        "dip_hat": [
+          -0.5903133690672115,
+          -0.08889845814598256,
+          -0.8022637910561495
+        ],
+        "template_names": [
+          "dec_z",
+          "dec2_z",
+          "sin_ra_z",
+          "cos_ra_z",
+          "haslam_k408_z",
+          "nvss_e_s1_4_z",
+          "lotss_isl_rms_z",
+          "lotss_masked_fraction_z",
+          "lotss_moc_frac_z"
+        ],
+        "template_coef": {
+          "LoTSS-DR2": [
+            -0.034005100922431725,
+            0.03194107544376884,
+            0.013100438242577297,
+            0.009083860419342484,
+            -0.002702352297407881,
+            -0.00012467056508928514,
+            -0.037489008884305,
+            -0.039021233731974234,
+            -3.707634078874615e-06
+          ],
+          "RACS-low": [
+            0.004375205161846401,
+            -0.013074587831235596,
+            -0.00425567715289111,
+            0.007433718227616288,
+            -0.010852428501622092,
+            -6.948367361878322e-05,
+            -7.135050953700241e-05,
+            -4.3471983018339144e-05,
+            0.00018899384399557667
+          ],
+          "NVSS": [
+            0.03265523119073947,
+            -0.015744470313818492,
+            0.006223782198337039,
+            0.008963973373336676,
+            -0.0034339596370354893,
+            0.01780358660198218,
+            -0.00010472053704781644,
+            0.00020850267718962762,
+            3.5612340045119115e-05
+          ]
+        },
+        "ic": {
+          "k_params": 33.0,
+          "n_obs": 17355.0,
+          "aic": 120598.2740299536,
+          "bic": 120854.40801558735
+        }
+      },
+      "mcmc": null
+    }
+  },
+  "injection_recovery": null
+}

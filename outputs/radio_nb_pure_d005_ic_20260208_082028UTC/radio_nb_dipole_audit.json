@@ -1,0 +1,214 @@
+{
+  "meta": {
+    "created_utc": "2026-02-08T08:20:47.046738+00:00",
+    "seed": 20260208,
+    "paper": "arXiv:2509.16732",
+    "cmb_ra_deg": 167.94,
+    "cmb_dec_deg": -6.94,
+    "cmb_hat": [
+      -0.970764275182547,
+      0.20740506491115845,
+      -0.12082988487333042
+    ]
+  },
+  "config": {
+    "nside": 32,
+    "nest": true,
+    "nb_model": "pure",
+    "extra_templates": [],
+    "gal_b_cut_deg": 10.0,
+    "lotss_moc_mode": "full",
+    "lotss_moc_lmax": 10,
+    "lotss_dec_min": null,
+    "lotss_dec_max": null,
+    "do_mcmc": false,
+    "mcmc_executed": false,
+    "nwalkers": 48,
+    "nburn": 600,
+    "nstep": 1400,
+    "nproc": 256,
+    "tmpl_coef_bound": 1.5,
+    "tmpl_ridge": 0.0,
+    "n_starts": 64,
+    "start_seed": 20260208,
+    "injection_nsim": 0,
+    "inj_d": 0.01735,
+    "inj_ra": 167.94,
+    "inj_dec": -6.94,
+    "inj_a_dec": 0.03,
+    "inj_a_dec2": -0.015,
+    "inj_a_sinra": 0.01,
+    "inj_a_cosra": 0.01
+  },
+  "inputs": {
+    "nvss_fits": "data/external/zenodo_6784602/secrest_extracted/secrest+22_accepted/nvss/reference/NVSS.fit",
+    "racs_csv_gz": "data/external/radio_dipole/racs_low/racs_low_dr1_sources_galacticcut_v2021_08_v02_mincols.csv.gz",
+    "lotss_fits": "data/external/radio_dipole/lotss_dr2/LoTSS_DR2_v110_masked.srl.fits",
+    "lotss_moc": "data/external/radio_dipole/lotss_dr2/dr2-moc.moc",
+    "haslam_fits": "data/external/zenodo_6784602/secrest_extracted/secrest+22_accepted/reference/haslam408_dsds_Remazeilles2014_512.fits"
+  },
+  "surveys": [
+    {
+      "name": "NVSS",
+      "cut_mjy": 20.0,
+      "n_cell": 8426,
+      "n_src": 266836,
+      "mu": 31.668169950154283,
+      "var": 43.86282971524227,
+      "p": 0.27801808146569174
+    },
+    {
+      "name": "RACS-low",
+      "cut_mjy": 20.0,
+      "n_cell": 7427,
+      "n_src": 332052,
+      "mu": 44.70876531573987,
+      "var": 56.875058486326296,
+      "p": 0.21391262698237767
+    },
+    {
+      "name": "LoTSS-DR2",
+      "cut_mjy": 5.0,
+      "n_cell": 1502,
+      "n_src": 444703,
+      "mu": 296.07390146471374,
+      "var": 915.1057236600644,
+      "p": 0.6764593491115605
+    }
+  ],
+  "fits": {
+    "NVSS": {
+      "map": {
+        "model": "pure",
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "n_starts": 64,
+        "d": 0.01980121644657892,
+        "ra_deg": 146.22462959064976,
+        "dec_deg": 20.747109183949973,
+        "r0": 82.13159890633999,
+        "loglike": -27652.710908665715,
+        "dip_hat": [
+          -0.7773212436978602,
+          0.5198874633868888,
+          0.3542438559935209
+        ],
+        "ic": {
+          "k_params": 4.0,
+          "n_obs": 8426.0,
+          "aic": 55313.42181733143,
+          "bic": 55341.57812710159
+        }
+      },
+      "mcmc": null
+    },
+    "RACS-low": {
+      "map": {
+        "model": "pure",
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "n_starts": 64,
+        "d": 0.0191405481798997,
+        "ra_deg": 185.12672010630388,
+        "dec_deg": -17.272293924912745,
+        "r0": 164.1819009667337,
+        "loglike": -25532.628669981426,
+        "dip_hat": [
+          -0.9510843925907183,
+          -0.08532911407129676,
+          -0.296913153063572
+        ],
+        "ic": {
+          "k_params": 4.0,
+          "n_obs": 7427.0,
+          "aic": 51073.25733996285,
+          "bic": 51100.90884911353
+        }
+      },
+      "mcmc": null
+    },
+    "LoTSS-DR2": {
+      "map": {
+        "model": "pure",
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "n_starts": 64,
+        "d": 0.05,
+        "ra_deg": 122.62126674649139,
+        "dec_deg": -33.58909744572591,
+        "r0": 143.93239563978756,
+        "loglike": -7238.117038410315,
+        "dip_hat": [
+          -0.4490708104425606,
+          0.7016185598749616,
+          -0.5532330464166496
+        ],
+        "ic": {
+          "k_params": 4.0,
+          "n_obs": 1502.0,
+          "aic": 14484.23407682063,
+          "bic": 14505.492288149926
+        }
+      },
+      "mcmc": null
+    },
+    "RACS-low + NVSS": {
+      "map": {
+        "model": "pure",
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "n_starts": 64,
+        "d": 0.017329479830013282,
+        "ra_deg": 168.79166067116495,
+        "dec_deg": 1.6064680829268079,
+        "r0s": {
+          "RACS-low": 164.4060154348456,
+          "NVSS": 82.21478113840558
+        },
+        "loglike": -53189.78954101343,
+        "dip_hat": [
+          -0.9805413275738579,
+          0.19430072731094722,
+          0.028034483874920208
+        ],
+        "ic": {
+          "k_params": 5.0,
+          "n_obs": 15853.0,
+          "aic": 106389.57908202686,
+          "bic": 106427.93465220608
+        }
+      },
+      "mcmc": null
+    },
+    "LoTSS-DR2 + RACS-low + NVSS": {
+      "map": {
+        "model": "pure",
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "n_starts": 64,
+        "d": 0.020537614280795778,
+        "ra_deg": 152.91523237987167,
+        "dec_deg": -6.189171908160681,
+        "r0s": {
+          "LoTSS-DR2": 141.46704058600534,
+          "RACS-low": 164.30032575890104,
+          "NVSS": 82.25248013348238
+        },
+        "loglike": -60451.30510285349,
+        "dip_hat": [
+          -0.8851444433909545,
+          0.45265439416513015,
+          -0.10781147330927357
+        ],
+        "ic": {
+          "k_params": 6.0,
+          "n_obs": 17355.0,
+          "aic": 120914.61020570698,
+          "bic": 120961.18002127676
+        }
+      },
+      "mcmc": null
+    }
+  },
+  "injection_recovery": null
+}

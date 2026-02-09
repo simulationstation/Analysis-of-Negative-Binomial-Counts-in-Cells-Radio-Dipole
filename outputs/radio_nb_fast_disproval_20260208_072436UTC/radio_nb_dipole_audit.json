@@ -1,0 +1,345 @@
+{
+  "meta": {
+    "created_utc": "2026-02-08T07:31:02.292704+00:00",
+    "seed": 20260208,
+    "paper": "arXiv:2509.16732",
+    "cmb_ra_deg": 167.94,
+    "cmb_dec_deg": -6.94,
+    "cmb_hat": [
+      -0.970764275182547,
+      0.20740506491115845,
+      -0.12082988487333042
+    ]
+  },
+  "config": {
+    "nside": 32,
+    "nest": true,
+    "nb_model": "decra_linear",
+    "gal_b_cut_deg": 10.0,
+    "lotss_moc_mode": "full",
+    "lotss_moc_lmax": 10,
+    "lotss_dec_min": null,
+    "lotss_dec_max": null,
+    "do_mcmc": false,
+    "mcmc_executed": false,
+    "nwalkers": 48,
+    "nburn": 600,
+    "nstep": 1400,
+    "nproc": 256,
+    "tmpl_coef_bound": 1.5,
+    "tmpl_ridge": 0.0,
+    "n_starts": 32,
+    "start_seed": 20260208,
+    "injection_nsim": 80,
+    "inj_d": 0.01735,
+    "inj_ra": 167.94,
+    "inj_dec": -6.94,
+    "inj_a_dec": 0.01,
+    "inj_a_dec2": -0.005,
+    "inj_a_sinra": 0.003,
+    "inj_a_cosra": 0.003
+  },
+  "inputs": {
+    "nvss_fits": "data/external/zenodo_6784602/secrest_extracted/secrest+22_accepted/nvss/reference/NVSS.fit",
+    "racs_csv_gz": "data/external/radio_dipole/racs_low/racs_low_dr1_sources_galacticcut_v2021_08_v02_mincols.csv.gz",
+    "lotss_fits": "data/external/radio_dipole/lotss_dr2/LoTSS_DR2_v110_masked.srl.fits",
+    "lotss_moc": "data/external/radio_dipole/lotss_dr2/dr2-moc.moc"
+  },
+  "surveys": [
+    {
+      "name": "NVSS",
+      "cut_mjy": 20.0,
+      "n_cell": 8426,
+      "n_src": 266836,
+      "mu": 31.668169950154283,
+      "var": 43.86282971524227,
+      "p": 0.27801808146569174
+    },
+    {
+      "name": "RACS-low",
+      "cut_mjy": 20.0,
+      "n_cell": 7427,
+      "n_src": 332052,
+      "mu": 44.70876531573987,
+      "var": 56.875058486326296,
+      "p": 0.21391262698237767
+    },
+    {
+      "name": "LoTSS-DR2",
+      "cut_mjy": 5.0,
+      "n_cell": 1502,
+      "n_src": 444703,
+      "mu": 296.07390146471374,
+      "var": 915.1057236600644,
+      "p": 0.6764593491115605
+    }
+  ],
+  "fits": {
+    "NVSS": {
+      "map": {
+        "model": "decra_linear",
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "n_starts": 32,
+        "d": 0.015,
+        "ra_deg": 167.94,
+        "dec_deg": -6.940000000000001,
+        "r0": 82.23870180150276,
+        "loglike": -27655.952152639326,
+        "dip_hat": [
+          -0.970764275182547,
+          0.20740506491115845,
+          -0.12082988487333042
+        ],
+        "template_names": [
+          "dec_z",
+          "dec2_z",
+          "sin_ra_z",
+          "cos_ra_z"
+        ],
+        "template_coef": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "mcmc": null
+    },
+    "RACS-low": {
+      "map": {
+        "model": "decra_linear",
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "n_starts": 32,
+        "d": 0.015,
+        "ra_deg": 167.94,
+        "dec_deg": -6.940000000000001,
+        "r0": 164.29603232728584,
+        "loglike": -25534.699203312768,
+        "dip_hat": [
+          -0.970764275182547,
+          0.20740506491115845,
+          -0.12082988487333042
+        ],
+        "template_names": [
+          "dec_z",
+          "dec2_z",
+          "sin_ra_z",
+          "cos_ra_z"
+        ],
+        "template_coef": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "mcmc": null
+    },
+    "LoTSS-DR2": {
+      "map": {
+        "model": "decra_linear",
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "n_starts": 32,
+        "d": 0.015,
+        "ra_deg": 167.94,
+        "dec_deg": -6.940000000000001,
+        "r0": 141.60783337059826,
+        "loglike": -7265.5180039065835,
+        "dip_hat": [
+          -0.970764275182547,
+          0.20740506491115845,
+          -0.12082988487333042
+        ],
+        "template_names": [
+          "dec_z",
+          "dec2_z",
+          "sin_ra_z",
+          "cos_ra_z"
+        ],
+        "template_coef": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "mcmc": null
+    },
+    "RACS-low + NVSS": {
+      "map": {
+        "model": "decra_linear",
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "n_starts": 32,
+        "d": 0.015,
+        "ra_deg": 167.94,
+        "dec_deg": -6.940000000000001,
+        "r0s": {
+          "RACS-low": 164.29603232728584,
+          "NVSS": 82.23870180150276
+        },
+        "loglike": -53190.6513559521,
+        "dip_hat": [
+          -0.970764275182547,
+          0.20740506491115845,
+          -0.12082988487333042
+        ],
+        "template_names": [
+          "dec_z",
+          "dec2_z",
+          "sin_ra_z",
+          "cos_ra_z"
+        ],
+        "template_coef": {
+          "RACS-low": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "NVSS": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "mcmc": null
+    },
+    "LoTSS-DR2 + RACS-low + NVSS": {
+      "map": {
+        "model": "decra_linear",
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "n_starts": 32,
+        "d": 0.015,
+        "ra_deg": 167.94,
+        "dec_deg": -6.940000000000001,
+        "r0s": {
+          "LoTSS-DR2": 141.60783337059826,
+          "RACS-low": 164.29603232728584,
+          "NVSS": 82.23870180150276
+        },
+        "loglike": -60456.16935985867,
+        "dip_hat": [
+          -0.970764275182547,
+          0.20740506491115845,
+          -0.12082988487333042
+        ],
+        "template_names": [
+          "dec_z",
+          "dec2_z",
+          "sin_ra_z",
+          "cos_ra_z"
+        ],
+        "template_coef": {
+          "LoTSS-DR2": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "RACS-low": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "NVSS": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "mcmc": null
+    }
+  },
+  "injection_recovery": {
+    "nsim": 80,
+    "seed": 20261117,
+    "d_inj": 0.01735,
+    "inj_ra_deg": 167.94,
+    "inj_dec_deg": -6.94,
+    "coeff_inj_dec_dec2_sinra_cosra": [
+      0.01,
+      -0.005,
+      0.003,
+      0.003
+    ],
+    "pure": {
+      "d": {
+        "mean": 0.027360758284377694,
+        "std": 0.0030547171203295347,
+        "p16": 0.02407283928432566,
+        "p50": 0.02738760129855808,
+        "p84": 0.03055982226723085
+      },
+      "axis_err_deg": {
+        "mean": 63.66885668230284,
+        "std": 6.050941498477978,
+        "p16": 57.029102787207705,
+        "p50": 63.36556722957262,
+        "p84": 70.2363324416564
+      },
+      "loglike": {
+        "mean": -60610.86808325329,
+        "std": 108.48972991167653,
+        "p16": -60708.37260144212,
+        "p50": -60625.75891603854,
+        "p84": -60500.82116387288
+      }
+    },
+    "template_linear": {
+      "d": {
+        "mean": 0.026271553384344747,
+        "std": 0.039231879720625897,
+        "p16": 0.0,
+        "p50": 0.015,
+        "p84": 0.0350963956299335
+      },
+      "axis_err_deg": {
+        "mean": 34.964489551842334,
+        "std": 43.12281459664254,
+        "p16": 0.0,
+        "p50": 0.0,
+        "p84": 81.45058867661562
+      },
+      "loglike": {
+        "mean": -60619.62420035082,
+        "std": 113.10797510970774,
+        "p16": -60723.76932342687,
+        "p50": -60621.12303701117,
+        "p84": -60526.0317597416
+      }
+    },
+    "delta_template_minus_pure": {
+      "d": {
+        "mean": -0.001089204900032949,
+        "std": 0.03928757535174592,
+        "p16": -0.02479340579547765,
+        "p50": -0.012192567349523007,
+        "p84": 0.007220424670720984
+      },
+      "axis_err_deg": {
+        "mean": -28.704367130460504,
+        "std": 43.12628302748601,
+        "p16": -67.92971482455451,
+        "p50": -55.29760127618404,
+        "p84": 20.09856206823551
+      },
+      "loglike": {
+        "mean": -8.756117097524566,
+        "std": 21.246122067628598,
+        "p16": -29.80100367543637,
+        "p50": -18.499987409650203,
+        "p84": 13.636010560926223
+      }
+    }
+  }
+}

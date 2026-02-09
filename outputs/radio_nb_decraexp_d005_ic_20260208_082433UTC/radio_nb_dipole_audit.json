@@ -1,0 +1,296 @@
+{
+  "meta": {
+    "created_utc": "2026-02-08T08:26:12.887925+00:00",
+    "seed": 20260208,
+    "paper": "arXiv:2509.16732",
+    "cmb_ra_deg": 167.94,
+    "cmb_dec_deg": -6.94,
+    "cmb_hat": [
+      -0.970764275182547,
+      0.20740506491115845,
+      -0.12082988487333042
+    ]
+  },
+  "config": {
+    "nside": 32,
+    "nest": true,
+    "nb_model": "decra_exp",
+    "extra_templates": [],
+    "gal_b_cut_deg": 10.0,
+    "lotss_moc_mode": "full",
+    "lotss_moc_lmax": 10,
+    "lotss_dec_min": null,
+    "lotss_dec_max": null,
+    "do_mcmc": false,
+    "mcmc_executed": false,
+    "nwalkers": 48,
+    "nburn": 600,
+    "nstep": 1400,
+    "nproc": 256,
+    "tmpl_coef_bound": 0.2,
+    "tmpl_ridge": 1.0,
+    "n_starts": 64,
+    "start_seed": 20260208,
+    "injection_nsim": 0,
+    "inj_d": 0.01735,
+    "inj_ra": 167.94,
+    "inj_dec": -6.94,
+    "inj_a_dec": 0.03,
+    "inj_a_dec2": -0.015,
+    "inj_a_sinra": 0.01,
+    "inj_a_cosra": 0.01
+  },
+  "inputs": {
+    "nvss_fits": "data/external/zenodo_6784602/secrest_extracted/secrest+22_accepted/nvss/reference/NVSS.fit",
+    "racs_csv_gz": "data/external/radio_dipole/racs_low/racs_low_dr1_sources_galacticcut_v2021_08_v02_mincols.csv.gz",
+    "lotss_fits": "data/external/radio_dipole/lotss_dr2/LoTSS_DR2_v110_masked.srl.fits",
+    "lotss_moc": "data/external/radio_dipole/lotss_dr2/dr2-moc.moc",
+    "haslam_fits": "data/external/zenodo_6784602/secrest_extracted/secrest+22_accepted/reference/haslam408_dsds_Remazeilles2014_512.fits"
+  },
+  "surveys": [
+    {
+      "name": "NVSS",
+      "cut_mjy": 20.0,
+      "n_cell": 8426,
+      "n_src": 266836,
+      "mu": 31.668169950154283,
+      "var": 43.86282971524227,
+      "p": 0.27801808146569174
+    },
+    {
+      "name": "RACS-low",
+      "cut_mjy": 20.0,
+      "n_cell": 7427,
+      "n_src": 332052,
+      "mu": 44.70876531573987,
+      "var": 56.875058486326296,
+      "p": 0.21391262698237767
+    },
+    {
+      "name": "LoTSS-DR2",
+      "cut_mjy": 5.0,
+      "n_cell": 1502,
+      "n_src": 444703,
+      "mu": 296.07390146471374,
+      "var": 915.1057236600644,
+      "p": 0.6764593491115605
+    }
+  ],
+  "fits": {
+    "NVSS": {
+      "map": {
+        "model": "decra_exp",
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "n_starts": 64,
+        "d": 0.05,
+        "ra_deg": 77.47602688800572,
+        "dec_deg": -65.91668376315178,
+        "r0": 82.89519391388257,
+        "loglike": -27642.64917198664,
+        "dip_hat": [
+          0.08848803601353698,
+          0.39835488733584395,
+          -0.9129530388897964
+        ],
+        "template_names": [
+          "dec_z",
+          "dec2_z",
+          "sin_ra_z",
+          "cos_ra_z"
+        ],
+        "template_coef": [
+          0.035134833877147116,
+          -0.01654950698195495,
+          -0.005958701723514192,
+          -0.013167543930424783
+        ],
+        "ic": {
+          "k_params": 8.0,
+          "n_obs": 8426.0,
+          "aic": 55301.29834397328,
+          "bic": 55357.61096351359
+        }
+      },
+      "mcmc": null
+    },
+    "RACS-low": {
+      "map": {
+        "model": "decra_exp",
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "n_starts": 64,
+        "d": 0.05,
+        "ra_deg": 215.63899935607395,
+        "dec_deg": 11.809738613978922,
+        "r0": 164.93456966053142,
+        "loglike": -25515.275845181644,
+        "dip_hat": [
+          -0.7955015160685304,
+          -0.5703425537030482,
+          0.20466242783704905
+        ],
+        "template_names": [
+          "dec_z",
+          "dec2_z",
+          "sin_ra_z",
+          "cos_ra_z"
+        ],
+        "template_coef": [
+          -0.01949384811901337,
+          -0.017704760352027102,
+          0.01665277423467764,
+          0.015138134888834007
+        ],
+        "ic": {
+          "k_params": 8.0,
+          "n_obs": 7427.0,
+          "aic": 51046.55169036329,
+          "bic": 51101.85470866464
+        }
+      },
+      "mcmc": null
+    },
+    "LoTSS-DR2": {
+      "map": {
+        "model": "decra_exp",
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "n_starts": 64,
+        "d": 0.05,
+        "ra_deg": 111.83228147299111,
+        "dec_deg": -0.9640701123879074,
+        "r0": 141.64639437064713,
+        "loglike": -7227.993368070946,
+        "dip_hat": [
+          -0.3718382583917393,
+          0.9281450400588988,
+          -0.016825403717695375
+        ],
+        "template_names": [
+          "dec_z",
+          "dec2_z",
+          "sin_ra_z",
+          "cos_ra_z"
+        ],
+        "template_coef": [
+          -0.07117981314049458,
+          0.054613348023937094,
+          -0.0036471755090538766,
+          -0.013210145046695538
+        ],
+        "ic": {
+          "k_params": 8.0,
+          "n_obs": 1502.0,
+          "aic": 14471.986736141893,
+          "bic": 14514.503158800486
+        }
+      },
+      "mcmc": null
+    },
+    "RACS-low + NVSS": {
+      "map": {
+        "model": "decra_exp",
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "n_starts": 64,
+        "d": 0.04893905796740845,
+        "ra_deg": 203.14790693775026,
+        "dec_deg": -44.908529635788284,
+        "r0s": {
+          "RACS-low": 163.14952110628894,
+          "NVSS": 82.6519430637696
+        },
+        "loglike": -53166.34996116685,
+        "dip_hat": [
+          -0.651216983587117,
+          -0.2784113801528485,
+          -0.7059770135699056
+        ],
+        "template_names": [
+          "dec_z",
+          "dec2_z",
+          "sin_ra_z",
+          "cos_ra_z"
+        ],
+        "template_coef": {
+          "RACS-low": [
+            0.0014703004114840434,
+            -0.014137460312374497,
+            0.008088359621035116,
+            0.009898376612139853
+          ],
+          "NVSS": [
+            0.029876723799671417,
+            -0.015095510030631126,
+            0.013038482510673603,
+            0.01014421068210003
+          ]
+        },
+        "ic": {
+          "k_params": 13.0,
+          "n_obs": 15853.0,
+          "aic": 106358.6999223337,
+          "bic": 106458.42440479966
+        }
+      },
+      "mcmc": null
+    },
+    "LoTSS-DR2 + RACS-low + NVSS": {
+      "map": {
+        "model": "decra_exp",
+        "success": true,
+        "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+        "n_starts": 64,
+        "d": 0.05,
+        "ra_deg": 178.01498162889,
+        "dec_deg": -43.995540055134924,
+        "r0s": {
+          "LoTSS-DR2": 143.88357527495646,
+          "RACS-low": 163.14566022798496,
+          "NVSS": 82.65321895465515
+        },
+        "loglike": -60399.22907612509,
+        "dip_hat": [
+          -0.7189621757939901,
+          0.024918491546113534,
+          -0.6946023744248488
+        ],
+        "template_names": [
+          "dec_z",
+          "dec2_z",
+          "sin_ra_z",
+          "cos_ra_z"
+        ],
+        "template_coef": {
+          "LoTSS-DR2": [
+            -0.06835265128317358,
+            0.05918299183549183,
+            0.015558928676555915,
+            -0.001980892839370931
+          ],
+          "RACS-low": [
+            0.0015551310782077883,
+            -0.014141774673578706,
+            -0.0003928517932081539,
+            0.012457374473420393
+          ],
+          "NVSS": [
+            0.029973131435235206,
+            -0.015075693038827007,
+            0.004714596899757044,
+            0.012666271709067218
+          ]
+        },
+        "ic": {
+          "k_params": 18.0,
+          "n_obs": 17355.0,
+          "aic": 120834.45815225018,
+          "bic": 120974.16759895951
+        }
+      },
+      "mcmc": null
+    }
+  },
+  "injection_recovery": null
+}

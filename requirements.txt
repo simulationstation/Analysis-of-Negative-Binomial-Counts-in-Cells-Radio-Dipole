@@ -1,0 +1,7 @@
+numpy>=1.22
+scipy>=1.10
+matplotlib>=3.7
+astropy>=5.0
+astropy-healpix>=1.0
+healpy>=1.16
+emcee>=3.1
