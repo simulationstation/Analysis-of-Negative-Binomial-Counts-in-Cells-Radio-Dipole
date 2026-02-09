@@ -19,20 +19,3 @@ negative-binomial counts-in-cells radio dipole robustness tests implemented in
 ```bash
 .venv/bin/python radio_a/make_figures.py
 ```
-
-## Compile
-
-From repo root:
-
-```bash
-pdflatex -interaction=nonstopmode radio_a/main.tex
-pdflatex -interaction=nonstopmode radio_a/main.tex
-```
-
-Or from inside `radio_a/`:
-
-```bash
-pdflatex -interaction=nonstopmode main.tex
-pdflatex -interaction=nonstopmode main.tex
-```
-

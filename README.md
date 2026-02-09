@@ -42,13 +42,6 @@ pip install -r requirements.txt
 python radio_a/make_figures.py
 ```
 
-## Compile manuscript
-
-```bash
-pdflatex -interaction=nonstopmode -output-directory=radio_a radio_a/main.tex
-pdflatex -interaction=nonstopmode -output-directory=radio_a radio_a/main.tex
-```
-
 ## Data paths for full reruns
 
 The scripts expect locally staged survey files (not committed here), with defaults:
