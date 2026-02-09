@@ -31,28 +31,26 @@
 \begin{abstract}
 Recent work has advocated a negative-binomial (NB) counts-in-cells dipole estimator for wide-area
 radio catalogs, in which per-cell overdispersion is absorbed by a single NB parameter inferred from
-the empirical mean and variance of the observed counts.
-Because radio dipole inferences are known to be sensitive to large-scale survey selection and
-calibration structure, a key question is whether a dipole-only NB model is identifiable on real
+the empirical mean and variance of the counts for each survey footprint.
+Because radio dipole inferences are sensitive to large-scale survey selection and
+calibration structure, the key question is whether a dipole-only NB model is identifiable on real
 survey footprints.
 
-Using publicly staged NVSS, RACS-low, and LoTSS-DR2 source catalogs with geometrically defined
-footprints (including zero-count cells at HEALPix $N_{\rm side}=32$), we reproduce the paper-style
-NB dipole-only fits and then perform controlled stress tests by adding nuisance templates.
-We implement both a linear modulation model (close to the baseline form) and an exponential
-intensity modulation that preserves positivity by construction and reduces to the linear model at
-first order.
-We further include physically motivated template maps available from public products or catalog
-columns: the Haslam 408\,MHz map, NVSS flux uncertainty proxy $\langle e_{S_{1.4}}\rangle$, and LoTSS
-per-source RMS/mask proxies aggregated into per-cell means, as well as a per-cell fractional MOC
-coverage proxy for the LoTSS footprint.
+Using staged NVSS, RACS-low, and LoTSS-DR2 catalogs with geometrically defined
+footprints (including zero-count cells at HEALPix $N_{\rm side}=32$), we reproduce dipole-only fits
+and perform controlled stress tests with nuisance templates.
+We implement linear and exponential intensity modulations for the NB shape field, where the
+exponential form preserves positivity and reduces to linear order.
+We include physically motivated template maps from public products and catalog columns: the Haslam
+408\,MHz map, an NVSS flux uncertainty proxy $\langle e_{S_{1.4}}\rangle$, and LoTSS RMS/mask proxies
+aggregated per cell, plus a fractional LoTSS MOC-coverage proxy.
 
 Two results are emphasized.
 First, injection/recovery tests show that modest structured selection templates can cause large
 axis mis-recovery under the dipole-only model.
-Second, on the real joint three-survey fit, adding nuisance freedom yields substantially higher
+Second, on the real joint three-survey fit, adding nuisance freedom yields higher
 likelihood solutions and large direction shifts relative to the dipole-only solution; with the
-physical-template set, the improvement is large enough to be favored even under BIC.
+physical-template set, the improvement is favored even under BIC.
 These findings indicate that dipole-only NB fits are not robustly identifiable without explicit,
 physically grounded survey systematics modeling and validated template choices.
 \end{abstract}
